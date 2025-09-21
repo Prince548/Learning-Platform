@@ -1,0 +1,105 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footerColumn {
+  flex: 1 1 180px;
+  min-width: 160px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.companyName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1ca74a;
+}
+
+.footerColumn h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footerColumn li:hover {
+  color: #1ca74a;
+}
+
+/* Social Media */
+.footerMiddle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #1ca74a;
+}
+
+/* Bottom */
+.footerBottom {
+  text-align: center;
+  font-size: 1rem;
+  color: #aaaaaa;
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerColumn {
+    margin-bottom: 2rem;
+  }
+}
+.linkButton {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}

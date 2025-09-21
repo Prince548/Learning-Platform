@@ -1,0 +1,107 @@
+/* Container */
+.sliderContainer {
+  padding: 60px 20px;
+  background-color: #e8f5e9; /* ✅ Light green background */
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Heading text */
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222f83; /* ✅ Dark green */
+}
+
+/* Subheading text */
+.subheading {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #39883d; /* ✅ Medium green */
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  width: calc(300px * 16); /* 8 cards * 2 = 16 for smooth loop */
+  animation: scroll 40s linear infinite;
+}
+
+/* Individual card */
+.card {
+  flex: 0 0 300px;
+  margin: 0 15px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.15); /* ✅ Light green shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(56, 142, 60, 0.3); /* ✅ Darker green shadow on hover */
+}
+
+/* Image inside card */
+.photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid #66bb6a; /* ✅ Green border */
+}
+
+/* Info section inside card */
+.info {
+  padding: 20px;
+}
+
+.info h3 {
+  font-size: 1.4rem;
+  color: #222f83; /* ✅ Dark green */
+  margin-bottom: 6px;
+}
+
+.role {
+  font-weight: 600;
+  color: #43a047; /* ✅ Green */
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #222f83; /* ✅ Slightly dark green */
+  line-height: 1.4;
+}
+
+/* Animation for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sliderTrack {
+    animation-duration: 60s;
+  }
+
+  .card {
+    flex: 0 0 250px;
+  }
+
+  .photo {
+    height: 200px;
+  }
+}

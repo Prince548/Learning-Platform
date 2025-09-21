@@ -1,0 +1,52 @@
+.wrapper {
+  padding: 2rem;
+  text-align: center;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+  color: #555;
+}
+
+.progress {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: green;
+}

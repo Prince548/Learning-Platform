@@ -1,0 +1,135 @@
+/* ===== Wrapper ===== */
+.course-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1B263B, #415A77);
+  color: #E2E8F0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 16px 32px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  background: rgba(27, 38, 59, 0.85);
+  color: #E2E8F0;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Layout ===== */
+.course-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 320px;
+  padding: 24px;
+  background: linear-gradient(135deg, #1B263B, #2D3748);
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-section {
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #2D3748, #4B5563);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar-section:hover {
+  transform: translateX(4px);
+  border-left-color: #2DD4BF;
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.2);
+}
+
+.sidebar-section.active {
+  border-left-color: #2DD4BF;
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-bottom: 6px;
+}
+
+.sidebar-section p {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin-bottom: 4px;
+}
+
+.sidebar-section small {
+  font-size: 12px;
+  color: #7F8FA4;
+}
+
+/* ===== Content ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(135deg, #111827, #1F2A44);
+  overflow-y: auto;
+}
+
+.content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #2DD4BF, #E2E8F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #D1D5DB;
+}
+
+/* ===== Scrollbar ===== */
+.sidebar::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2DD4BF, #14B8A6);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #14B8A6, #0D9488);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .course-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 300px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .content {
+    padding: 24px 16px;
+  }
+}
+

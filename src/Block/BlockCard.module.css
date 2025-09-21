@@ -1,0 +1,94 @@
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d6f0df;
+  padding: 4rem 5rem;
+  border-radius: 12px;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.textSection {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.category {
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #1ca74a;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #008328;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #6c7a93;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.button {
+  background-color: #1ca74a;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #158c3f;
+}
+
+.imageSection {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .textSection,
+  .imageSection {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

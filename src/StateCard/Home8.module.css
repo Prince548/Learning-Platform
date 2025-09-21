@@ -1,0 +1,169 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 4rem 6rem;
+    flex-direction: row;
+  }
+}
+
+.imageLeft {
+  flex: 1;
+  max-width: 550px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.imageLeft img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imageLeft img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.textRight {
+  flex: 1;
+  max-width: 500px;
+  padding: 1.5rem;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageLeft {
+    max-width: 90%;
+  }
+
+  .textRight {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.textRight h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1f2937;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .textRight h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .textRight h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.greenText {
+  color: #38a169; /* Professional green */
+}
+
+.textRight h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .textRight h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .textRight h3 {
+    font-size: 1rem;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .buttonGroup {
+    justify-content: center;
+  }
+}
+
+.primaryButton {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #2563eb;
+  padding: 0.75rem 2rem;
+  border: 2px solid #2563eb;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

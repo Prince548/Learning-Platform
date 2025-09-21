@@ -1,0 +1,79 @@
+.quickActions {
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.actionCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.actionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #007acc;
+}
+
+.actionCard.primary {
+  background: linear-gradient(135deg, #007acc 0%, #0056b3 100%);
+  color: white;
+}
+
+.actionCard.primary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  border-color: transparent;
+}
+
+.icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.content h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.content p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.actionCard.primary .content p {
+  opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .actionsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .actionCard {
+    padding: 1rem;
+  }
+}

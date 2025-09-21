@@ -1,0 +1,80 @@
+.courseWrapper {
+  padding: 2rem;
+  background: #0f172a; /* Navy Blue */
+  min-height: 100vh;
+  color: #f8fafc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #facc15; /* Yellow for highlight */
+  letter-spacing: 1px;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.courseCard {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
+  position: relative;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.courseTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 0.3rem;
+}
+
+.courseDesc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 0.8rem;
+  flex-grow: 1;
+}
+
+.progress {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.buyButton {
+  background-color: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.buyButton:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}

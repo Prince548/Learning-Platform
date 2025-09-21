@@ -1,0 +1,70 @@
+.aboutSection {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #e8f0ff, #f8f9fc);
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+}
+
+/* Typing / wave animation for letters */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  display: inline-block;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #333;
+  padding: 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  font-weight: 700;
+  color: #1976d2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

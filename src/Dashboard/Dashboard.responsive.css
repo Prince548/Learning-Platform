@@ -1,0 +1,180 @@
+/* Mobile Navigation Overlay for smaller screens */
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobileMenuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile menu button */
+.mobileMenuBtn {
+  display: none;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 123, 204, 0.3);
+}
+
+/* Performance optimizations */
+.container * {
+  will-change: auto;
+}
+
+.card:hover {
+  will-change: transform, box-shadow;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+  
+  .container {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  
+  .main {
+    background-color: transparent;
+  }
+  
+  .chartBox,
+  .activityList {
+    background: #1e293b;
+    border: 1px solid #334155;
+  }
+  
+  .sectionTitle {
+    color: #e2e8f0;
+  }
+  
+  .filterBtn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+  }
+  
+  .filterBtn:hover {
+    border-color: #007acc;
+    color: #007acc;
+  }
+}
+
+/* Print styles */
+@media print {
+  .container {
+    display: block;
+    background: white;
+  }
+  
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .chartBox {
+    break-inside: avoid;
+  }
+  
+  .quickActions,
+  .headerActions {
+    display: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card,
+  .chartBox {
+    border: 2px solid #000;
+  }
+  
+  .filterBtn {
+    border-width: 2px;
+  }
+  
+  .continueBtn,
+  .startBtn {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+}
+
+/* Large text support */
+@media (min-width: 1400px) {
+  .main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Ultra mobile (very small screens) */
+@media (max-width: 320px) {
+  .main {
+    padding: 0.5rem;
+  }
+  
+  .statsSection {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .chartBox {
+    padding: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet landscape specific adjustments */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+  
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chartsContainer {
+    grid-template-columns: 1fr;
+  }
+}

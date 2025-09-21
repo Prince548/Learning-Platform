@@ -1,0 +1,114 @@
+.container {
+  padding: 3rem 2rem;
+  background-color: #d9f0e5;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around; /* 👈 evenly spaced items */
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.2rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2b2b2b;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.readMore {
+  font-size: 0.95rem;
+  color: #1ca74a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+.views {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    justify-content: center; /* stack nicely in center for mobile */
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .image {
+    height: 200px;
+  }
+}

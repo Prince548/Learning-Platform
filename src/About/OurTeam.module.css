@@ -1,0 +1,93 @@
+.teamContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.teamContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.teamIntro {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid #0074cc;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .photo {
+  transform: scale(1.05);
+}
+
+.info {
+  padding: 20px;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  color: #002050;
+  margin-bottom: 5px;
+}
+
+.role {
+  font-weight: 600;
+  color: #0074cc;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .teamContainer {
+    padding: 30px 15px;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    height: 200px;
+  }
+}
