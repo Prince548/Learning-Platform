@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { courseData } from "./courseData";
+import { CourseData } from "./CourseData";
 import styles from "./Courses.module.css"; // Or your CSS file
 
 const Courses = () => {
