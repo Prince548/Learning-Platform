@@ -1,5 +1,5 @@
 // courseData.js
-export const courseData = {
+export const CourseData = {
   html: {
     title: "HTML Fundamentals",
     desc: "Learn the structure of web pages with HTML.",
