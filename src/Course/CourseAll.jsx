@@ -1,6 +1,6 @@
 // CourseAll.jsx
 import React from "react";
-import styles from "./CourseAll.module.css";
+import styles from "./Courseall.module.css";
 import { courseData } from "./courseData"; // import from correct data file
 
 const CourseAll = ({ onSelectCourse }) => {
